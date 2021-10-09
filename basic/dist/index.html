@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <div id="view-cube"></div>
+    <button id="button1">Add box</button>
+    <input id="button2" type="file" accept=".dae" />
+    <div id="context-menu">
+      <div class="context-menu-item" id="translate">Translate</div>
+      <div class="context-menu-item" id="rotate">Rotate</div>
+      <div class="context-menu-item" id="scale">Scale</div>
+    </div>
+  </body>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #view-cube {
+      position: fixed;
+      bottom: 60px;
+      left: 60px;
+    }
+
+    #button1 {
+      position: fixed;
+      top: 6px;
+      left: 6px;
+    }
+
+    #button2 {
+      position: fixed;
+      top: 60px;
+      left: 6px;
+    }
+
+    #context-menu {
+      position: fixed;
+      display: none;
+      flex-direction: column;
+      border-radius: 5px;
+      overflow: hidden;
+      width: 100px;
+    }
+
+    .context-menu-item {
+      width: 100%;
+      padding: 5px;
+      background-color: #eee;
+    }
+
+    .context-menu-item:hover {
+      background-color: #ccc;
+      cursor: pointer;
+    }
+  </style>
+</html>
